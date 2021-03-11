@@ -1,0 +1,6 @@
+framework module Pods_Bagzz {
+  umbrella header "Pods-Bagzz-umbrella.h"
+
+  export *
+  module * { export * }
+}
