@@ -10,5 +10,5 @@ import Foundation
 
 struct BagCatalog: Decodable {
     let title: String
-    let thumbnailUrl: String
+    let url: String
 }

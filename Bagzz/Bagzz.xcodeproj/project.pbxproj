@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5752475425FA119600B8AC17 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5752475325FA119600B8AC17 /* TabBarController.swift */; };
 		577F511E25F798A90055A893 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577F511D25F798A90055A893 /* AppDelegate.swift */; };
 		577F512025F798A90055A893 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577F511F25F798A90055A893 /* SceneDelegate.swift */; };
-		577F512225F798A90055A893 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577F512125F798A90055A893 /* ViewController.swift */; };
+		577F512225F798A90055A893 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577F512125F798A90055A893 /* HomeViewController.swift */; };
 		577F512525F798A90055A893 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 577F512325F798A90055A893 /* Main.storyboard */; };
 		577F512725F798AC0055A893 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 577F512625F798AC0055A893 /* Assets.xcassets */; };
 		577F512A25F798AC0055A893 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 577F512825F798AC0055A893 /* LaunchScreen.storyboard */; };
@@ -19,15 +20,15 @@
 		57E3464225F7B3590085FE39 /* CollectionViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E3464025F7B3590085FE39 /* CollectionViewCell2.swift */; };
 		57E3464325F7B3590085FE39 /* CollectionViewCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57E3464125F7B3590085FE39 /* CollectionViewCell2.xib */; };
 		57E3464625F7C37B0085FE39 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E3464525F7C37B0085FE39 /* UIImageView.swift */; };
-		57E3464825F8AD0D0085FE39 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E3464725F8AD0D0085FE39 /* TabBar.swift */; };
 		D943D0B5A724B55A3AD5306C /* Pods_Bagzz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 697DD8790FD9101A717DE191 /* Pods_Bagzz.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5752475325FA119600B8AC17 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		577F511A25F798A90055A893 /* Bagzz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bagzz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		577F511D25F798A90055A893 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		577F511F25F798A90055A893 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		577F512125F798A90055A893 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		577F512125F798A90055A893 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		577F512425F798A90055A893 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		577F512625F798AC0055A893 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		577F512925F798AC0055A893 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -38,7 +39,6 @@
 		57E3464025F7B3590085FE39 /* CollectionViewCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell2.swift; sourceTree = "<group>"; };
 		57E3464125F7B3590085FE39 /* CollectionViewCell2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell2.xib; sourceTree = "<group>"; };
 		57E3464525F7C37B0085FE39 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
-		57E3464725F8AD0D0085FE39 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		697DD8790FD9101A717DE191 /* Pods_Bagzz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bagzz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		90C19A0FDD6846496616D294 /* Pods-Bagzz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bagzz.release.xcconfig"; path = "Target Support Files/Pods-Bagzz/Pods-Bagzz.release.xcconfig"; sourceTree = "<group>"; };
 		A523877BF0A9C7EE9A964A7C /* Pods-Bagzz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bagzz.debug.xcconfig"; path = "Target Support Files/Pods-Bagzz/Pods-Bagzz.debug.xcconfig"; sourceTree = "<group>"; };
@@ -87,12 +87,12 @@
 			children = (
 				577F511D25F798A90055A893 /* AppDelegate.swift */,
 				577F511F25F798A90055A893 /* SceneDelegate.swift */,
-				577F513125F7A9DD0055A893 /* BagCatalog.swift */,
-				577F512125F798A90055A893 /* ViewController.swift */,
-				57AFB43D25F9FAF200718A1A /* NetworkManager.swift */,
+				579E08D925FB506100982C34 /* Models */,
+				579E08D825FB503F00982C34 /* Networking */,
+				5752475325FA119600B8AC17 /* TabBarController.swift */,
+				577F512125F798A90055A893 /* HomeViewController.swift */,
 				57E3463E25F7B2460085FE39 /* CollectionViewCell.swift */,
 				57E3464025F7B3590085FE39 /* CollectionViewCell2.swift */,
-				57E3464725F8AD0D0085FE39 /* TabBar.swift */,
 				57E3464125F7B3590085FE39 /* CollectionViewCell2.xib */,
 				577F512325F798A90055A893 /* Main.storyboard */,
 				57E3464425F7C35A0085FE39 /* Extensions */,
@@ -101,6 +101,22 @@
 				577F512B25F798AC0055A893 /* Info.plist */,
 			);
 			path = Bagzz;
+			sourceTree = "<group>";
+		};
+		579E08D825FB503F00982C34 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				57AFB43D25F9FAF200718A1A /* NetworkManager.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		579E08D925FB506100982C34 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				577F513125F7A9DD0055A893 /* BagCatalog.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		57E3464425F7C35A0085FE39 /* Extensions */ = {
@@ -239,9 +255,9 @@
 				57AFB43E25F9FAF200718A1A /* NetworkManager.swift in Sources */,
 				57E3463F25F7B2460085FE39 /* CollectionViewCell.swift in Sources */,
 				577F513225F7A9DD0055A893 /* BagCatalog.swift in Sources */,
+				5752475425FA119600B8AC17 /* TabBarController.swift in Sources */,
 				57E3464625F7C37B0085FE39 /* UIImageView.swift in Sources */,
-				57E3464825F8AD0D0085FE39 /* TabBar.swift in Sources */,
-				577F512225F798A90055A893 /* ViewController.swift in Sources */,
+				577F512225F798A90055A893 /* HomeViewController.swift in Sources */,
 				57E3464225F7B3590085FE39 /* CollectionViewCell2.swift in Sources */,
 				577F511E25F798A90055A893 /* AppDelegate.swift in Sources */,
 				577F512025F798A90055A893 /* SceneDelegate.swift in Sources */,

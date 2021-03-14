@@ -9,13 +9,14 @@
 import UIKit
 import Alamofire
 
-class ViewController: UIViewController {
+class HomeViewController: UIViewController {
 
     var bags = [BagCatalog]()
     var arrayToDisplay: [BagCatalog] = []
+    
     var carouselArray = ["bags1", "bags2"]
     var isLoading = false
-
+    
     
     @IBOutlet weak var carouselCollectionView: UICollectionView!
     @IBOutlet weak var catalogCollectionView: UICollectionView!
@@ -28,7 +29,8 @@ class ViewController: UIViewController {
         
         catalogCollectionView.register(UINib(nibName: "CollectionViewCell2", bundle: nil), forCellWithReuseIdentifier: "cell2")
         
-        fetchData()
+        loadData()
+       
     }
 
     @IBAction func leftButton(_ sender: Any) {
@@ -47,67 +49,59 @@ class ViewController: UIViewController {
         if nextItem.row < carouselArray.count {
                carouselCollectionView.scrollToItem(at: nextItem, at: .left, animated: true)
         }
+        
     }
+    
+    
+    func loadData() {
+        let networkManager = NetworkManager()
+            
+        networkManager.getBag(onCompleted: { (bag) in
+            self.bags = bag
+            self.arrayToDisplay = Array(self.bags[0..<20])
+            self.catalogCollectionView.reloadData()
+        }) { (error) in
+            print("error: \(error)")
+        }
+    }
+    
     
     func settingLayout() {
         let itemSize = UIScreen.main.bounds.width
-
         let layout = UICollectionViewFlowLayout()
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         layout.itemSize = CGSize(width: itemSize, height: itemSize)
         layout.scrollDirection = .horizontal
         layout.minimumInteritemSpacing = 3
-        layout.minimumLineSpacing = 3
 
         carouselCollectionView.collectionViewLayout = layout
     }
-    
-    
-    func fetchData() {
-
-        AF.request("https://jsonplaceholder.typicode.com/photos", method: .get).validate().responseJSON { response in
-            switch response.result {
-            case .success(let value):
-                for item in value as! [[String: AnyObject]] {
-                    let bagsData = BagCatalog(title: item["title"] as! String, thumbnailUrl: item["thumbnailUrl"] as! String)
-                    self.bags.append(bagsData)
-                }
-            case .failure(_):
-                print("error")
-            }
-            self.arrayToDisplay = Array(self.bags[0..<20])
-            self.catalogCollectionView.reloadData()
-        }
-    }
-    
-  
+     
 }
 
 
-extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-         if (collectionView == carouselCollectionView) {
-            return carouselArray.count
-         }
-         
-         return arrayToDisplay.count
-     }
-     
-     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if (collectionView == carouselCollectionView) {
+        return carouselArray.count
+        }
         
+        return arrayToDisplay.count
+    }
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+
         if collectionView == catalogCollectionView {
             let cell2 = catalogCollectionView.dequeueReusableCell(withReuseIdentifier: "cell2", for: indexPath) as! CollectionViewCell2
-
-            cell2.image.downloaded(from: arrayToDisplay[indexPath.item].thumbnailUrl)
+            cell2.image.downloaded(from: arrayToDisplay[indexPath.item].url)
             cell2.title.text = arrayToDisplay[indexPath.item].title
             return cell2
         }
-        
-         let cell = carouselCollectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CollectionViewCell
+
+        let cell = carouselCollectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CollectionViewCell
         cell.image.image = UIImage(named: carouselArray[indexPath.item])
-        
-         return cell
-     }
+        return cell
+    }
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
 

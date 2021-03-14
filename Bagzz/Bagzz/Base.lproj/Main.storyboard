@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="R3g-EA-I0T">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Bagzz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="Bagzz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -91,7 +91,7 @@
                                     <action selector="leftButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BxO-JC-kes"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="abV-4R-BaX">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="abV-4R-BaX">
                                 <rect key="frame" x="302" y="264" width="51" height="51"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -129,20 +129,6 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Hwx-do-yHe"/>
                                 </connections>
                             </collectionView>
-                            <tabBar clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dB6-GO-T7X">
-                                <rect key="frame" x="0.0" y="723" width="375" height="49"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <items>
-                                    <tabBarItem title="" image="home" id="lNB-yG-JXs"/>
-                                    <tabBarItem title="" image="search" id="UVJ-hY-Xhi"/>
-                                    <tabBarItem title="" image="heart" id="Lwc-su-9DN"/>
-                                    <tabBarItem title="" image="cart" id="HxK-rK-4Gx"/>
-                                </items>
-                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="selectedImageTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </tabBar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -151,9 +137,9 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="byX-gM-SA0" secondAttribute="trailing" constant="12" id="7QB-RK-Ow7"/>
                             <constraint firstItem="Ble-PV-4MI" firstAttribute="leading" secondItem="fSZ-i1-dr8" secondAttribute="trailing" constant="18" id="9Fl-oi-4aM"/>
                             <constraint firstItem="gvo-VA-pF2" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Ble-PV-4MI" secondAttribute="trailing" constant="8" symbolic="YES" id="CXI-UN-Pyv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8cy-2K-nuu" secondAttribute="trailing" constant="75" id="E9O-Re-22f"/>
                             <constraint firstAttribute="bottom" secondItem="9xb-Kc-OVU" secondAttribute="bottom" id="HLB-cB-kQN"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gvo-VA-pF2" secondAttribute="trailing" constant="12" id="KXG-by-lG2"/>
-                            <constraint firstItem="8cy-2K-nuu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="249" id="M0m-ET-9Ip"/>
                             <constraint firstItem="gvo-VA-pF2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="W66-4Y-Hk8"/>
                             <constraint firstItem="fSZ-i1-dr8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="19" id="XAa-aM-Vym"/>
                             <constraint firstItem="9xb-Kc-OVU" firstAttribute="top" secondItem="byX-gM-SA0" secondAttribute="bottom" constant="40" id="bZO-nv-ivb"/>
@@ -161,12 +147,16 @@
                             <constraint firstItem="byX-gM-SA0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="12" id="k7Z-0v-1kJ"/>
                             <constraint firstItem="9xb-Kc-OVU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="lun-04-noI"/>
                             <constraint firstItem="abV-4R-BaX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="220" id="mC5-V9-MOp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="abV-4R-BaX" secondAttribute="trailing" constant="22" id="rFu-9J-LHV"/>
                             <constraint firstItem="fSZ-i1-dr8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="12" id="sbc-qe-Ag5"/>
                             <constraint firstItem="Ble-PV-4MI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="9" id="tUr-pt-CKc"/>
-                            <constraint firstItem="abV-4R-BaX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="302" id="vTP-lc-EcG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="" image="home" id="gM5-8F-35f">
+                        <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="carouselCollectionView" destination="byX-gM-SA0" id="ljG-rC-eK0"/>
                         <outlet property="catalogCollectionView" destination="9xb-Kc-OVU" id="yCI-K4-Kdt"/>
@@ -174,7 +164,80 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1079.2" y="120.44334975369459"/>
+            <point key="canvasLocation" x="3002" y="-58"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="hdb-T2-Qgm">
+            <objects>
+                <viewController id="YHZ-oL-hAp" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wyD-zN-AeZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="hYi-Iu-aLI"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="search" id="p8d-m0-sQ0"/>
+                    <navigationItem key="navigationItem" id="sdH-fH-j0y"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rtQ-pA-ga9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1532" y="863"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="dJt-mR-W9U">
+            <objects>
+                <viewController id="Igr-6H-08J" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5Iu-tI-KKE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="7EL-Nj-gmQ"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="heart" id="OeG-x9-EsP"/>
+                    <navigationItem key="navigationItem" id="0Wd-cA-i7n"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kzB-m5-uNO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2233" y="862"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="yMB-fq-YW6">
+            <objects>
+                <viewController id="jWH-LM-8mp" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ynx-au-H9b">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="BFj-vC-8Js"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="cart" id="Exl-4a-Egp"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jEh-n9-qsA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2937" y="862"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="g9t-X3-aqD">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="R3g-EA-I0T" customClass="TabBarController" customModule="Bagzz" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" itemPositioning="centered" id="TqA-dy-vqZ">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="aOe-Cq-WHf"/>
+                        <segue destination="YHZ-oL-hAp" kind="relationship" relationship="viewControllers" id="fdU-pY-Bi1"/>
+                        <segue destination="Igr-6H-08J" kind="relationship" relationship="viewControllers" id="amw-ha-fNC"/>
+                        <segue destination="jWH-LM-8mp" kind="relationship" relationship="viewControllers" id="0cW-v5-P4N"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HkB-l9-Chn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2021.5999999999999" y="120.44334975369459"/>
         </scene>
     </scenes>
     <resources>
