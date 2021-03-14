@@ -25,12 +25,38 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        settingLayout()
+        settingLayoutCarousel()
+        settingLayoutCatalog()
         
         catalogCollectionView.register(UINib(nibName: "CollectionViewCell2", bundle: nil), forCellWithReuseIdentifier: "cell2")
         
         loadData()
        
+    }
+    
+    
+    func settingLayoutCarousel() {
+        
+        let itemSize = UIScreen.main.bounds.width
+        let layout = UICollectionViewFlowLayout()
+        layout.itemSize = CGSize(width: itemSize, height: itemSize)
+        layout.scrollDirection = .horizontal
+        layout.minimumInteritemSpacing = 3
+
+        carouselCollectionView.collectionViewLayout = layout
+    }
+    
+    func settingLayoutCatalog() {
+        let itemWidth = (UIScreen.main.bounds.width - 35)/2
+        let layout = UICollectionViewFlowLayout()
+        layout.itemSize = CGSize(width: itemWidth, height: 210)
+        layout.scrollDirection = .vertical
+        layout.minimumInteritemSpacing = 13
+        layout.minimumLineSpacing = 24
+        layout.sectionInset.left = 11
+        layout.sectionInset.right = 11
+        layout.sectionInset.bottom = 85
+        catalogCollectionView.collectionViewLayout = layout
     }
 
     @IBAction func leftButton(_ sender: Any) {
@@ -65,16 +91,6 @@ class HomeViewController: UIViewController {
         }
     }
     
-    
-    func settingLayout() {
-        let itemSize = UIScreen.main.bounds.width
-        let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: itemSize, height: itemSize)
-        layout.scrollDirection = .horizontal
-        layout.minimumInteritemSpacing = 3
-
-        carouselCollectionView.collectionViewLayout = layout
-    }
      
 }
 
@@ -120,7 +136,6 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             }
         }
     }
-     
     
 }
 
