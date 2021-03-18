@@ -235,100 +235,6 @@
             <point key="canvasLocation" x="2021.5999999999999" y="120.44334975369459"/>
         </scene>
         <!--Converter View Controller-->
-        <scene sceneID="nnw-Xn-PJm">
-            <objects>
-                <viewController id="fhl-xg-t5h" customClass="ConverterViewController" customModule="Bagzz" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5OO-pA-g3b">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Введите сумму" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DpY-6D-kZw">
-                                <rect key="frame" x="24" y="169" width="326" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Валюта" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NbJ-hB-3hm">
-                                <rect key="frame" x="24" y="284" width="284" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Валюта" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1wy-Jf-u0T">
-                                <rect key="frame" x="24" y="222" width="284" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pkr-HK-Wt0">
-                                <rect key="frame" x="100" y="350" width="175" height="58"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Рассчитать">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="resultButton:" destination="fhl-xg-t5h" eventType="touchUpInside" id="nhK-96-boU"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AIa-Kt-nYM">
-                                <rect key="frame" x="308" y="222" width="42" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" image="arrowtriangle.down" catalog="system"/>
-                                <connections>
-                                    <action selector="button:" destination="fhl-xg-t5h" eventType="touchUpInside" id="y3n-gz-5bP"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ql-kj-L16">
-                                <rect key="frame" x="308" y="284" width="42" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" image="arrowtriangle.down" catalog="system"/>
-                                <connections>
-                                    <action selector="buttonCur:" destination="fhl-xg-t5h" eventType="touchUpInside" id="jyz-cP-p6b"/>
-                                </connections>
-                            </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Zd-eJ-pk4">
-                                <rect key="frame" x="16" y="612" width="343" height="166"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aUh-Qr-24Y">
-                                        <rect key="frame" x="0.0" y="8" width="343" height="158"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                    </pickerView>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="результат" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i0x-wX-riv">
-                                <rect key="frame" x="45" y="435" width="284" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemGray4Color" red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="pEd-oO-6Kp"/>
-                    </view>
-                    <connections>
-                        <outlet property="amountTextField" destination="DpY-6D-kZw" id="6zY-uA-KZ7"/>
-                        <outlet property="firstCurrency" destination="1wy-Jf-u0T" id="EsP-KB-4Vc"/>
-                        <outlet property="pickerCurrency" destination="aUh-Qr-24Y" id="C5R-8X-ZJR"/>
-                        <outlet property="resultLabel" destination="i0x-wX-riv" id="fkT-Wt-uho"/>
-                        <outlet property="secondCurrency" destination="NbJ-hB-3hm" id="afE-4y-pGL"/>
-                        <outlet property="viewWithPicker" destination="0Zd-eJ-pk4" id="m9u-6B-YS5"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3CJ-05-xtI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="365.60000000000002" y="-128.57142857142858"/>
-        </scene>
-        <!--Converter View Controller-->
         <scene sceneID="EHz-ce-L3m">
             <objects>
                 <viewController id="h18-aO-Xbk" customClass="ConverterViewController" customModule="Bagzz" customModuleProvider="target" sceneMemberID="viewController">
@@ -336,16 +242,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите сумму" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JRi-jV-XNF">
-                                <rect key="frame" x="24" y="169" width="326" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите сумму" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JRi-jV-XNF">
+                                <rect key="frame" x="24" y="169" width="327" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="eqK-k6-jDb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                <connections>
+                                    <outlet property="delegate" destination="h18-aO-Xbk" id="VVi-Ae-WsZ"/>
+                                </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X0I-es-bbX">
-                                <rect key="frame" x="100" y="350" width="175" height="58"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.44965462631012959" green="0.61680844674724011" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X0I-es-bbX">
+                                <rect key="frame" x="100" y="374" width="175" height="58"/>
+                                <color key="backgroundColor" red="0.84172226476802026" green="0.83407920594006579" blue="0.11052411698694581" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="S7K-Iw-SB4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Charter-Roman" family="Charter" pointSize="19"/>
                                 <state key="normal" title="Рассчитать">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -353,34 +267,59 @@
                                     <action selector="resultButton:" destination="h18-aO-Xbk" eventType="touchUpInside" id="wru-xt-EPc"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="результат" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yOp-N5-AEd">
-                                <rect key="frame" x="45" y="435" width="284" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="RUS-tL-QoG">
+                                <rect key="frame" x="24" y="249" width="327" height="95"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Выберите валюту" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bcr-zn-4gZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="327" height="41"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="41" id="rdq-U3-492"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Charter-Roman" family="Charter" pointSize="22"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Выберите валюту" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bWb-53-n8D">
+                                        <rect key="frame" x="0.0" y="54" width="327" height="41"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="41" id="9nA-et-swP"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Charter-Roman" family="Charter" pointSize="22"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yOp-N5-AEd">
+                                <rect key="frame" x="45" y="457" width="284" height="105"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="105" id="i7x-Kc-j3b"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Charter-Roman" family="Charter" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Выберите валюту" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bWb-53-n8D">
-                                <rect key="frame" x="24" y="277" width="326" height="38.333333333333336"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Выберите валюту" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bcr-zn-4gZ">
-                                <rect key="frame" x="24" y="226.99999999999989" width="326" height="38.333333333333336"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
-                        <color key="backgroundColor" red="0.5367456418231602" green="0.83921568629999999" blue="0.53543493917438945" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.35923637537771264" green="0.83921568629999999" blue="0.50726532114753831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="RUS-tL-QoG" firstAttribute="leading" secondItem="Fsz-As-xa7" secondAttribute="leading" constant="24" id="0kf-VQ-2vD"/>
+                            <constraint firstItem="JRi-jV-XNF" firstAttribute="top" secondItem="Fsz-As-xa7" secondAttribute="top" constant="125" id="23M-BH-E4F"/>
+                            <constraint firstItem="Fsz-As-xa7" firstAttribute="trailing" secondItem="X0I-es-bbX" secondAttribute="trailing" constant="100" id="2VC-3a-Rpm"/>
+                            <constraint firstItem="Fsz-As-xa7" firstAttribute="trailing" secondItem="RUS-tL-QoG" secondAttribute="trailing" constant="24" id="AFw-Ha-XBO"/>
+                            <constraint firstItem="X0I-es-bbX" firstAttribute="leading" secondItem="Fsz-As-xa7" secondAttribute="leading" constant="100" id="Alz-Z5-NH8"/>
+                            <constraint firstItem="yOp-N5-AEd" firstAttribute="leading" secondItem="Fsz-As-xa7" secondAttribute="leading" constant="45" id="MRC-mr-GbM"/>
+                            <constraint firstItem="Fsz-As-xa7" firstAttribute="trailing" secondItem="JRi-jV-XNF" secondAttribute="trailing" constant="24" id="QEj-fK-b8r"/>
+                            <constraint firstItem="JRi-jV-XNF" firstAttribute="leading" secondItem="Fsz-As-xa7" secondAttribute="leading" constant="24" id="VaJ-oq-7US"/>
+                            <constraint firstItem="X0I-es-bbX" firstAttribute="top" secondItem="RUS-tL-QoG" secondAttribute="bottom" constant="30" id="c5y-iS-y1O"/>
+                            <constraint firstItem="Fsz-As-xa7" firstAttribute="trailing" secondItem="yOp-N5-AEd" secondAttribute="trailing" constant="46" id="qW1-aB-gvi"/>
+                            <constraint firstItem="RUS-tL-QoG" firstAttribute="top" secondItem="JRi-jV-XNF" secondAttribute="bottom" constant="40" id="szb-y7-hMs"/>
+                            <constraint firstItem="yOp-N5-AEd" firstAttribute="top" secondItem="X0I-es-bbX" secondAttribute="bottom" constant="25" id="vnx-yz-wY0"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Fsz-As-xa7"/>
                     </view>
                     <connections>
                         <outlet property="amountTextField" destination="JRi-jV-XNF" id="7Ie-sO-h19"/>
-                        <outlet property="firstCur" destination="bcr-zn-4gZ" id="XtU-xh-U0c"/>
+                        <outlet property="firstCurrency" destination="bcr-zn-4gZ" id="XtU-xh-U0c"/>
                         <outlet property="resultLabel" destination="yOp-N5-AEd" id="ZvN-R4-nUo"/>
-                        <outlet property="secondCur" destination="bWb-53-n8D" id="FDb-Am-ewz"/>
+                        <outlet property="secondCurrency" destination="bWb-53-n8D" id="FDb-Am-ewz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ysi-Ig-UOO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -391,7 +330,6 @@
     <resources>
         <image name="arrowLeft" width="28" height="23"/>
         <image name="arrowRight" width="28" height="23"/>
-        <image name="arrowtriangle.down" catalog="system" width="128" height="124"/>
         <image name="bags1" width="1053" height="585"/>
         <image name="button" width="24" height="14"/>
         <image name="cart" width="26" height="20"/>
